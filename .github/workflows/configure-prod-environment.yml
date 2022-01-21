@@ -1,0 +1,18 @@
+on:
+  push:
+    - main
+
+name: Configure environemnt for deployment
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: microsoft/variable-substitution@v1 
+        with:
+          files: 'app.yaml'
+        env:
+          env_variables.NAMESPACE: ${{ secrets.NAMESPACE }}
