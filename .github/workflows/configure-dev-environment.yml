@@ -15,4 +15,4 @@ jobs:
         with:
           files: 'app.yaml'
         env:
-          env_variables.NAMESPACE: ${{ secrets.NAMESPACE }}
+          env_variables.NAMESPACE: "${{ secrets.NAMESPACE }}"
