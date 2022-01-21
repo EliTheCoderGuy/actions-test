@@ -1,6 +1,7 @@
 on:
   push:
-    - main
+    branches:
+      - main
 
 name: Configure environemnt for deployment
 
