@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: microsoft/variable-substitution@v1 
-        with:
-          files: 'app.json'
-        env:
-          env_variables.NAMESPACE: cat
+    with:
+      files: 'app.json'
+    env:
+      NAMESPACE: cat
