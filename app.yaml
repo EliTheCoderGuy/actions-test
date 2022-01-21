@@ -1,0 +1,10 @@
+runtime: nodejs14
+
+env: standard
+instance_class: B2
+
+manual_scaling:
+  instances: 2
+
+env_variables:
+  NAMESPACE: "example"
