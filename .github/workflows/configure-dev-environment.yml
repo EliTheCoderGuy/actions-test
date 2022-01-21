@@ -7,12 +7,11 @@ name: Configure environemnt for deployment
 
 jobs:
   config:
-    runs-on: ubuntu-latest
-    environment: dev
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: microsoft/variable-substitution@v1 
-        with:
-          files: 'app.json'
-        env:
-          NAMESPACE: "cat"
+    - uses: actions/checkout@v2
+    - uses: microsoft/variable-substitution@v1 
+      with:
+        files: 'app.json'
+      env:
+        NAMESPACE: "cat"
